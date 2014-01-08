@@ -51,7 +51,7 @@
         var p = d.getElementById(c.tag).parentNode;
         p.style.background = 'none';
         p.style.border = 'none';
-        p.insertBefore(s);
+        p.insertBefore(s,d.getElementById(c.tag));
 
         d.body.style.background = '#ffffff';
         return;
@@ -66,7 +66,7 @@
             s.src = c.SingleEngineFile;
         }
         else if (c.engineDir && !c.SingleEngineFile) {
-            s.src = c.engineDir + 'platform/jsloader.js';
+            s.src = c.engineDir + 'jsloader.js';
         }
         else {
             alert('You must specify either the single engine file OR the engine directory in "cocos2d.js"');
